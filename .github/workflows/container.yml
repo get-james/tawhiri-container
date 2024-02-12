@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 #  schedule:
 #    - cron: '25 4 * * 1'
-
+#commit to get it going
 jobs:
   main:
     runs-on: ubuntu-latest
