@@ -24,7 +24,7 @@ RUN unzip /root/tawhiri-master.zip -d /root && \
 # -------------------------
 FROM debian:buster-slim
 
-EXPOSE 40000/tcp
+EXPOSE 8000/tcp
 
 RUN apt-get update && \
   apt-get upgrade -y && \
@@ -46,4 +46,4 @@ ENV PATH=/root/.local/bin:$PATH
 
 ENTRYPOINT ["/usr/bin/tini", "--"]
 
-CMD /root/.local/bin/gunicorn -b 0.0.0.0:40000 -w 12 tawhiri.api:app
+CMD /root/.local/bin/gunicorn -b 0.0.0.0:8000 -w 12 tawhiri.api:app
