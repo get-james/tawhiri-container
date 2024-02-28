@@ -13,7 +13,8 @@ RUN apt-get update && \
     unzip && \
   rm -rf /var/lib/apt/lists/*
 
-ADD https://github.com/get-james/tawhiri/archive/master.zip /root/tawhiri-master.zip
+#ADD https://github.com/get-james/tawhiri/archive/master.zip /root/tawhiri-master.zip
+ADD https://github.com/get-james/tawhiri/archive/send_datasets.zip /root/tawhiri-send_datasets.zip
 RUN unzip /root/tawhiri-master.zip -d /root && \
   cd /root/tawhiri-master && \
   pip3 install --user --no-warn-script-location --ignore-installed -r requirements.txt && \
