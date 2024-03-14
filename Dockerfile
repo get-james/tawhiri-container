@@ -2,7 +2,7 @@
 # The build container
 # -------------------
 FROM debian:buster-slim AS build
-#test20 (implemententing view datasets feature) Workflow not start?
+#test21 testing compatibility with old gqis plugin version
 RUN apt-get update && \
   apt-get install -y --no-install-recommends \
     build-essential \
